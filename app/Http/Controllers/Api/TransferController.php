@@ -12,14 +12,14 @@ use DB;
 use Exception;
 use Illuminate\Support\Facades\Response;
 use Symfony\Component\HttpFoundation\Response as StatusCode;
-use Symfony\Component\HttpKernel\Exception\HttpException;
 use Symfony\Component\HttpKernel\Exception\TooManyRequestsHttpException;
 
 class TransferController extends Controller
 {
     public function __construct(
         private readonly TransferService $transferService
-    ) {}
+    ) {
+    }
 
     public function store(StoreTransferRequest $request)
     {

@@ -3,9 +3,7 @@
 namespace App\Repositories;
 
 use App\Enums\TransactionStatus;
-use App\Enums\TransactionType;
 use App\Models\Transaction;
-use App\Models\User;
 use Exception;
 
 class TransactionRepository

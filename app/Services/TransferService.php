@@ -13,9 +13,11 @@ use App\Repositories\UserRepository;
 class TransferService
 {
     private readonly TransactionRepository $transactionRepository;
+
     private readonly UserRepository $userRepository;
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->transactionRepository = new TransactionRepository();
         $this->userRepository = new UserRepository();
     }

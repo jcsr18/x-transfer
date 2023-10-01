@@ -7,7 +7,7 @@ use App\Models\User;
 
 class UserRepository
 {
-    public function findByTransferKey(string $transferKey): null | User
+    public function findByTransferKey(string $transferKey): ?User
     {
         return User::where('transfer_key', $transferKey)->first();
     }
@@ -28,11 +28,8 @@ class UserRepository
 
     /**
      * Return last transaction when user was a sender
-     *
-     * @param User $user
-     * @return Transaction|null
      */
-    public function lastSenderTransaction(User $user): Transaction | null
+    public function lastSenderTransaction(User $user): ?Transaction
     {
         return $user->ownTransactions()->latest()->first();
     }

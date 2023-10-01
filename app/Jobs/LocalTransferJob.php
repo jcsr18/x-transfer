@@ -21,7 +21,8 @@ class LocalTransferJob implements ShouldQueue
     public function __construct(
         public Transaction $transaction,
         private readonly TransactionRepository $transactionRepository = new TransactionRepository(),
-    ) {}
+    ) {
+    }
 
     public function handle(): void
     {
